@@ -1,5 +1,9 @@
-#main {
+body {
     background-color: peachpuff;
+    padding: 0 40px;
+
+}
+#main {
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -14,7 +18,8 @@
 
 #image {
     display: block;
-    width: 50%;
+    max-width: 100%;
+    height:auto;
     margin-left: auto;
     margin-right: auto;
 }
@@ -24,6 +29,7 @@
 }
 
 #tribute-info {
+    padding-top: 10px;
     margin-left: 5%;
 }
 
@@ -49,15 +55,17 @@
     float: left;
     width: 20%;
     text-align: center;
-    display: block;
+
 }
 
-.left p {
+.left > p,
+.right > p {
     width: 50%;
     margin-top: 10px;
-    margin-right: 5px;
     padding: 10px;
-    background-color: red;
+    background-color: cyan;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .right {
@@ -66,12 +74,7 @@
     width: 20%;
 }
 
-.right p {
-    width: 70%;
-    margin-top: 10px;
-    padding: 10px;
-    background-color: cyan;
-}
+
 
 @media only screen and (max-width:600px) {
     .left, .right {
