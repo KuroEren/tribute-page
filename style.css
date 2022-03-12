@@ -1,41 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle&family=Roboto+Condensed&display=swap');
+
+* {
+    margin:0;
+    padding: 0;
+    font-family: 'Dongle';
+}
 body {
-    background-color: peachpuff;
-    padding: 0 40px;
 
 }
 #main {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+nav {
+    background-color: #FFFFF0;
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    opacity: 0.8;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-left: 50px;
+}
+
+nav ul li {
+    list-style: none;
+    line-height: 50px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 0 10px;
+    font-size: 1.5rem;
+}
+
+/*Title*/
+.first {
+    background-color: peachpuff;
+    padding: 70px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 300px 1fr 230px;
+    grid-template-areas: 
+    "title ."
+    "info image"
+    ". .";
+
+}
+
 #title {
+    grid-area: title;
     text-align: center;
-    
+    font-size: 5rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
 }
 
 #img-div {
-    
+    display: block;
+    margin: auto;
+    padding: 100px 0 0 0;
 }
 
 #image {
-    display: block;
-    max-width: 100%;
-    height:auto;
-    margin-left: auto;
-    margin-right: auto;
+    grid-area: image;
+    border-radius: 2rem;
 }
 
 #img-caption {
     text-align: center;
+    line-height: 1.5;
+    font-size: 1.5rem;
 }
 
 #tribute-info {
-    padding-top: 10px;
-    margin-left: 5%;
+    padding: 0 20px;
+    text-align: center;
+    grid-area: info;
+    font-size: 1.5rem;
 }
 
-#tribute-link {
+/* First Content */
 
+.first-content {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "first early";
 }
+
+.earlyAc {
+    grid-area: first;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.early-story {
+    grid-area: early;
+}
+
 
 .story {
     text-indent: 5%;
